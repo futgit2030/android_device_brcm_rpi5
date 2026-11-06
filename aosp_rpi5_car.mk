@@ -126,3 +126,14 @@ PRODUCT_MANUFACTURER := Raspberry
 # adb
 PRODUCT_VENDOR_PROPERTIES += \
     persist.adb.tcp.port=5555
+
+# gPTP / IEEE 802.1AS
+PRODUCT_PACKAGES += \
+    ptp4l \
+    phc2sys \
+    pmc \
+    phc_ctl \
+    hwstamp_ctl
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/car/gptp.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gptp.cfg
