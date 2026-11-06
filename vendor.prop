@@ -64,3 +64,6 @@ ro.boot.hypervisor.vm.supported=1
 ro.boot.wificountrycode=00
 wifi.direct.interface=p2p-dev-wlan0
 wifi.interface=wlan0
+
+# PTP
+vendor.gptp.enable=1
