@@ -39,8 +39,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     bluetooth.profile.csip.set_coordinator.enabled=false \
     bluetooth.profile.hap.client.enabled=false \
     bluetooth.profile.hfp.ag.enabled=false \
-    bluetooth.profile.hid.device.enabled=false \
-    bluetooth.profile.hid.host.enabled=false \
+    bluetooth.profile.hid.device.enabled=true \
+    bluetooth.profile.hid.host.enabled=true \
     bluetooth.profile.map.server.enabled=false \
     bluetooth.profile.mcp.server.enabled=false \
     bluetooth.profile.opp.enabled=false \
@@ -122,3 +122,7 @@ PRODUCT_NAME := aosp_rpi5_car
 PRODUCT_BRAND := Raspberry
 PRODUCT_MODEL := Pi 5
 PRODUCT_MANUFACTURER := Raspberry
+
+# adb
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.adb.tcp.port=5555
