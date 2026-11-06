@@ -138,5 +138,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/car/gptp.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gptp.cfg
 
-# device/brcm/rpi5/aosp_rpi5_car.mk - falls tc nicht schon im Produkt ist
+# tc patch version 
 PRODUCT_PACKAGES += tc
+
+# AVB / AVTP
+PRODUCT_PACKAGES += \
+    libavtp \
+    aaf-talker2 \
+    libasound_module_pcm_aaf \
+    tsn-setup.sh
+
+# Beispiel-Tools aus libavtp, nur fuer Bring-up
+PRODUCT_PACKAGES_DEBUG += \
+    aaf-talker \
+    aaf-listener \
+    crf-talker \
+    crf-listener
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/avtp/init.avtp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.avtp.rc 
