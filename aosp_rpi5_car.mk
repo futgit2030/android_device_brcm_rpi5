@@ -137,3 +137,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/car/gptp.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gptp.cfg
+
+# device/brcm/rpi5/aosp_rpi5_car.mk - falls tc nicht schon im Produkt ist
+PRODUCT_PACKAGES += tc
